@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AutomationConfig
   m_EditorClassIdentifier: 
   OnPlayMode: 1
-  OnPlayModeIfWarnings: 0
-  OnPlayModeIfErrors: 3
+  OnPlayModeIfWarnings: 4
+  OnPlayModeIfErrors: 1
   OnPlayModeAlwaysCompleteValidationFully: 0
   OnPlayModeFlashScreen: 0
   OnPlayModeSetup:
@@ -22,7 +22,7 @@ MonoBehaviour:
     ProfileAsset: {fileID: 11400000, guid: 00b48c2fb4ecb7040b1a97c263c54ec1, type: 2}
   OnBuild: 1
   OnBuildIfWarnings: 4
-  OnBuildIfErrors: 3
+  OnBuildIfErrors: 1
   OnBuildAlwaysCompleteValidationFully: 0
   OnBuildFlashScreen: 0
   OnBuildSetup:
