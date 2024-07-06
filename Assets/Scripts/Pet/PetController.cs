@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PetController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private CameraController cameraController;
+    private PetAnimator petAnimator;
+    private bool isPlayerMoving = false;
+    private Vector3 lastPlayerPosition;
+
     void Start()
     {
-        
+        petAnimator = GetComponent<PetAnimator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        isPlayerMoving = cameraController.isPlayerMoving;
+        lastPlayerPosition = cameraController.lastPlayerPosition;
     }
 }

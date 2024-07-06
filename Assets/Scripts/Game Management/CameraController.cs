@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Reconoce si la camara se mueve o no.
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float movementThreshold = 0.01f;
-    public Vector3 lastPosition;
-    public bool isMoving = false;
+    [SerializeField] public float movementThreshold = 0.01f;
+    public Vector3 lastPlayerPosition;
+    public bool isPlayerMoving = false;
 
     void Start()
     {
-        lastPosition = Input.acceleration;
+        lastPlayerPosition = transform.position;
     }
 
     void Update()
     {
-        Vector3 deltaPosition = Input.acceleration - lastPosition;
+        Vector3 currentPosition = transform.position;
+        Vector3 deltaPosition = currentPosition - lastPlayerPosition;
         if (deltaPosition.sqrMagnitude > movementThreshold)
         {
-            isMoving = true;
+            isPlayerMoving = true;
         }
         else
         {
-            isMoving = false;
+            isPlayerMoving = false;
         }
-        lastPosition = Input.acceleration;
+        lastPlayerPosition = currentPosition;
     }
 
 }
